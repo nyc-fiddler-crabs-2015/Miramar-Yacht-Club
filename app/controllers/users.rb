@@ -1,5 +1,10 @@
 get '/users' do
-	"test"
+	"All Users Page"
+end
+
+get '/users/:id' do
+	@user = User.find(params[:id])
+	erb :'users/show'
 end
 
 get '/account_settings' do
