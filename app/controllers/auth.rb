@@ -1,21 +1,32 @@
-get '/login' do
-  @error = params[:error]
-  @error = @error.tr!('_', ' ') if @error
-  redirect "users/#{current_user.id}" if current_user
-  erb :'auth/login'
-end
+# get '/login' do
+#   @error = params[:error]
+#   @error = @error.tr!('_', ' ') if @error
+#   redirect "users/#{current_user.id}" if current_user
+#   erb :'auth/login'
+# end
 
 
-post '/login' do 
+# post '/login' do 
+#   user = User.find_by_username(params[:username])
+#   if user && user.authenticate( params[:password] )
+#     session[:user_id] = user.id
+#     redirect "/users/#{user.id}"
+#   else
+#     redirect "/login?error=The_username_or_password_is_incorrect"
+#   end
+# end
+
+
+post '/login_ajax' do
+  content_type :json
   user = User.find_by_username(params[:username])
   if user && user.authenticate( params[:password] )
     session[:user_id] = user.id
-    redirect "/users/#{user.id}"
+    {avatar: user.avatar, user_id: user.id, username: user.username}.to_json
   else
-    redirect "/login?error=The_username_or_password_is_incorrect"
+    401
   end
 end
-
 
 
 get '/logout' do
