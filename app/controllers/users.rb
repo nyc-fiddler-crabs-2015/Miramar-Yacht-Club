@@ -9,7 +9,10 @@ get '/users.json' do
 end
 
 get '/users/:id' do
+	redirect '/' if !current_user
 	@user = User.find(params[:id])
+	@my_events = Event.where(user_id: current_user.id)
+	@my_collabs = Collaborator.where(user_id: current_user.id)
 	erb :'users/show'
 end
 
