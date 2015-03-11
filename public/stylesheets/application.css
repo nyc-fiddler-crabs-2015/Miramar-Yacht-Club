@@ -5,6 +5,17 @@
   border: 1px dotted black;
   display: block;
 }
+.wallpaper {
+  background: url('http://hdw.datawallpaper.com/boats/sailboats-under-the-verrazano-bridge-307604.jpg');
+  display: block;
+  height: 640px;
+  width: 100%;
+  background-size: cover;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /*position: absolute;*/
+}
 
 th {
   text-align: left;
@@ -64,4 +75,10 @@ ul.dropdown-menu {
 textarea {
   width: 100%;
   padding:  15px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  height: 20px;
 }
