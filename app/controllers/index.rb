@@ -1,3 +1,3 @@
 get '/' do
-  erb :index
+  erb :index, :layout => :layout_home
 end
