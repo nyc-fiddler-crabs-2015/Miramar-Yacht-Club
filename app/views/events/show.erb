@@ -1,0 +1,23 @@
+<h1>Event</h1>
+<div><%= @event.title %></div>
+<h3>Description</h3>
+<div><%= @event.description %></div>
+<h4>Creator</h4>
+<div><%= @event.user.first_name || @event.user.username %></div>
+<h2>Collaborators</h2>
+<% @event.collaborators.each do |collaborator| %>
+	<div><%= collaborator.user.username %> | Bringing <%= collaborator.guest_num %> People 
+	<a href="/events/<%= @event.id %>/collaborators/<%= collaborator.id %>/edit"><i class="fa fa-pencil-square-o"></i></a> 
+	<a href="#"><i class="fa fa-times"></i></a>
+	<%= erb :'collaborators/_delete', :layout => false, :locals => {:event => @event, :collaborator_id => collaborator.id} %>
+
+	</div> 
+
+<% end %>
+<a href="/events/<%= @event.id %>/collaborators/new">Join Event</a>
+<h2>Comments</h2>
+<% @event.comments.each_with_index do |comment,i| %>
+	<div><%= i+1 %>. <%= comment.user.username%> said | <%= comment.content %></div>
+<% end %>
+
+<%= erb :'comments/_new', :layout => false, :locals => {:event => @event} %>
