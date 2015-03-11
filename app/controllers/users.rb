@@ -1,5 +1,11 @@
 get '/users' do
-	"All Users Page"
+	erb :'users/index'
+end
+
+get '/users.json' do
+	content_type :json
+	@users = User.all
+	@users.to_json
 end
 
 get '/users/:id' do
