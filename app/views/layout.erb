@@ -1,56 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<link rel='stylesheet' href='/stylesheets/normalize.css' type='text/css'>
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<%= erb :_head %>
 
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-	<link rel='stylesheet' href='/stylesheets/application.css' type='text/css'>
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script src="/js/application.js"></script>
-
-	<title><%= @title || "Miramir Yacht Club" %></title>
-</head>
 <body>
-	<header>
-		<div id="leftnav"><a href="/"><%= @title || "Miramir Yacht Club" %></a></div>
-		<% if current_user %>
+	<%= erb :_header %>
+	<div class="container">
 
-		<div id="rightnav">
-			<div class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<img src="<%= current_user.avatar %>" class="profile-image img-circle"> <%= current_user.username %> <i class="caret"></i></a>
-					<ul class="dropdown-menu">
-					<li><a href="/events"><i class="fa fa-diamond"></i> All Events</a></li>
-						<li class="divider"></li>
-						<li><a href="/users/<%= current_user.id %>"><i class="fa fa-rocket"></i> User Dashboard</a></li>
-						<li class="divider"></li>
-						<li><a href="/account_settings"><i class="fa fa-cog"></i> Edit Account</a></li>
-						<li class="divider"></li>
-						<li><a href="/logout"><i class="fa fa-sign-out"></i> Sign-out</a></li>
-					</ul>
-				</div>
-
-
-
-
-				<a href="/logout">Logout</a></div>
-				<% else %>
-
-				<div id="rightnav"><a href="/login">Login</a></div>
-				<% end %>
-			</header>
-			<div class="container">
-
-				<%= yield %>
-			</div>
-		</body>
-		</html>
+		<%= yield %>
+	</div>
+	<%= erb :_login_modal %>
+</body>
+</html>
