@@ -1,8 +1,14 @@
 <div>User Dashboard</div>
 <a class="btn btn-default" href="/events/new">Create New Event</a>
 <div>My Events</div>
-<% @things.each do |thing| %>
-	
+<% @my_events.each do |event| %>
+	<div><a href="#"><%= event.title %></a></div>
+
 <% end %>
 <div><a href=""></a></div>
 <div>Events I'm joining</div>
+
+<% @my_collabs.each do |collab| %>
+	<div><a href="#"><%= collab.event.title %></a></div>
+
+<% end %>
