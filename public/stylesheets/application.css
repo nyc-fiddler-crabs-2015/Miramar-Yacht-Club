@@ -82,3 +82,28 @@ textarea {
   text-align: center;
   height: 20px;
 }
+
+form{
+  display: inline;
+}
+
+.ex {
+
+  background: none;
+  border: none;
+  color: orangered;
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+.ex:hover {
+  color: #ca0002;
+}
+
+.banner_text {
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+  text-shadow: 1px 1px #fff;
+
+}
