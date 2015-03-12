@@ -52,9 +52,12 @@ var userObject = function(user){
 	this.first_name = user.first_name;
 	this.last_name = user.last_name;
 	this.email = user.email;
-	this.buildThumbnail = function(){
+	
 
-		return 	'<div class="col-sm-6 col-md-4">' +
+}
+
+userObject.prototype.buildThumbnail = function(){
+	return 	'<div class="col-sm-6 col-md-4">' +
 		'<div class="thumbnail">' +
 		'<img src="'+ this.avatar + '" alt="">' +
 		'<div class="caption">' +
@@ -64,13 +67,11 @@ var userObject = function(user){
 		'</div>' +
 		'</div>' +
 		'</div>' 
-	};
-	this.fullname = function(){
+};
+
+userObject.prototype.fullname = function(){
 		return this.first_name + " " + this.last_name;
 	}
-
-
-}
 
 var buildRightNav = function(params){
 	return 	'<div class="dropdown">' +
