@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  shallow do
+  resources :events do
+    resources :comments
+    resources :collaborators
+  end
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
