@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<%= render partial: "layouts/head" %>
+<body>
+	<%= render partial: "layouts/header" %>
+	<div class="wallpaper">
+
+		<%= yield %>
+	</div>
+	<div class="container">
+		<% 3.times do  %>
+		<div class="panel panel-default width_33 ">
+			<div class="panel-heading">
+				<h3 class="panel-title">Panel title</h3>
+			</div>
+			<div class="panel-body">
+				Panel content
+			</div>
+		</div>
+		<% end %>
+	</div>
+	<%= render partial: "layouts/login_modal" %>
+
+</body>
+</html>

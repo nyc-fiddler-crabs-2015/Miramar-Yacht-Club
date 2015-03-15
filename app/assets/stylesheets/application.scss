@@ -1,0 +1,137 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
+body {
+  font-family: Helvetica, Arial, FreeSans, sans-serif;
+  background: lightgrey;
+}
+.container {
+  margin: 0 auto;
+  width: 1240px;
+  // padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+  display: block;
+  background: white;
+}
+.wallpaper {
+  background: url('http://hdw.datawallpaper.com/boats/sailboats-under-the-verrazano-bridge-307604.jpg');
+  display: block;
+  height: 640px;
+  width: 1240px;
+  margin: auto;
+  background-size: cover;
+  background-color: transparent;
+  background-position: center center;
+  background-repeat: no-repeat;
+  /*position: absolute;*/
+}
+
+th {
+  text-align: left;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.formline {
+  width: 100%;
+  margin: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease;
+  opacity: 0;
+}
+
+
+header {
+  background: black;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  height: 3em;
+}
+
+header div {
+  padding: 5px 5px; 
+}
+
+header #rightnav {
+  float: right;
+}
+
+header #leftnav {
+  float: left;
+}
+
+header a, header a:hover {
+  color: white;
+}
+
+ul.dropdown-menu {
+  left: -5.8em;
+}
+.profile-image {
+  height: 15px;
+  width: 15px;
+  background: white;
+}
+textarea {
+  width: 100%;
+  padding:  15px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  height: 20px;
+}
+
+form{
+  display: inline;
+}
+
+.ex {
+
+  background: none;
+  border: none;
+  color: orangered;
+  text-decoration: underline;
+  cursor: pointer;
+
+}
+.ex:hover {
+  color: #ca0002;
+}
+
+.banner_text {
+  text-align: center;
+  margin: 0;
+  padding: 40px;
+  text-shadow: 1px 1px #fff;
+
+}
+
+.width_33 {
+  width: 33%;
+  display: inline-block;
+}

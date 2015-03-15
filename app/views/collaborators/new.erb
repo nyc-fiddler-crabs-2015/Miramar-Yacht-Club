@@ -1,0 +1,11 @@
+<form action="/events/<%= @event_id %>/collaborators" method="post">
+
+Guests: <select name="guest_num">
+<% Collaborator.selection.each do |num|  %>
+  <option value="<%= num %>"><%= num %></option>
+<% end %>
+  
+</select>
+<input type="submit" value="Add Collaborator">
+
+</form>

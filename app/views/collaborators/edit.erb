@@ -1,0 +1,18 @@
+<form action="/events/<%= @event_id %>/collaborators/<%= @collaborator.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+
+	Guests: <select name="guest_num">
+	<% Collaborator.selection.each do |num|  %>
+	<% if num == @collaborator.guest_num %>
+		<option selected="true" value="<%= num %>"><%= num %></option>
+
+	<% else %>
+
+	<option value="<%= num %>"><%= num %></option>
+	<% end %>
+	<% end %>
+
+</select>
+<input type="submit" value="Update Collaborator">
+
+</form>

@@ -1,0 +1,21 @@
+<h1>Edit Account</h1>
+<% if @error %>
+	<div class="error"><%= @error %></div>
+<% end %>
+<form action="/users/<%= current_user.id %>" method="post">
+	<input type="hidden" name="_method" value="put">
+	<div class="formline"><input type="text" name="username" placeHolder="username" value="<%=current_user.username%>"></div>
+	<div class="formline"><input type="text" name="email" placeHolder="Email" value="<%=current_user.email%>"></div>
+	<div class="formline"><input type="text" name="first_name" placeHolder="First Name" value="<%=current_user.first_name%>"></div>
+	<div class="formline"><input type="text" name="last_name" placeHolder="Last Name" value="<%=current_user.last_name%>"></div>
+	<div class="formline"><input type="password" name="password" placeHolder="password"></div>
+	<div class="formline"><input type="password" name="password_confirmation" placeHolder="password-confirmation"></div>
+	<div class="formline"><input type="submit" value="Update Account"></div>
+</form>
+
+<form action="/user/<%= current_user.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	
+	<div class="formline"><input type="submit" value="Cancel Account"></div>
+</form>
+
