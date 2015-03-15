@@ -1,7 +1,10 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+user = User.create(username: "gaba", password: "123", avatar: "http://img4.wikia.nocookie.net/__cb20130920142351/simpsons/images/e/e9/Pic_1187696292_8.jpg", first_name: "Justin", last_name: "Gaba", email: "gaba@gaba.com")
+user2 = User.create(username: "eligaba", password: "123", avatar: "http://img4.wikia.nocookie.net/__cb20130920142351/simpsons/images/e/e9/Pic_1187696292_8.jpg", first_name: "Eli", last_name: "Gaba", email: "eligaba@gaba.com")
+
+event = Event.create(user_id: user.id, title: "BBQ + Ranger Game", description: "Come join us for some good dogs and Hockey Action!", event_date: DateTime.parse('2015-03-11 13:30:00'))
+collaborator = Collaborator.create(user_id: user.id, event_id: event.id, guest_num: 4)
+collaborator2 = Collaborator.create(user_id: user2.id, event_id: event.id, guest_num: 4)
+
+comment = Comment.create(user_id: user.id, event_id: event.id, content: "I can't wait for this event")
+
