@@ -13,12 +13,20 @@
  *= require_tree .
  *= require_self
  */
-  @import "bootstrap-sprockets";
-  @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 body {
   font-family: Helvetica, Arial, FreeSans, sans-serif;
   background: lightgrey;
 }
+.navbar, .navbar-default {
+  margin-bottom: 0; 
+}
+
+.navbar-brand {
+  padding: 15px 2em 15px 40px;
+}
+
 .container {
   margin: 0 auto;
   width: 1240px;
