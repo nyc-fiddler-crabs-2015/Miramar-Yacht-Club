@@ -1,0 +1,10 @@
+<h1>Log In</h1>
+<% if @error %>
+	<div class="error"><%= @error %></div>
+<% end %>
+
+<%= form_tag "/login", method: "post" do %>
+	<%= text_field :user, :username %>
+	<%= password_field :user, :password %>
+	<%= submit_tag "Login" %>
+	<% end %>
