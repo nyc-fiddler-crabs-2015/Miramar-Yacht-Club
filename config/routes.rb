@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/logout', to: 'auth#logout'
   get '/signup', to: 'auth#signup'
   post '/signup', to: 'auth#create'
-
+  get '/cal_test', to: 'events#cal_test'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

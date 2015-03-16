@@ -1,28 +1,28 @@
-== README
+##User Story (CSS and Design)
+1. As a user I would like to see these sections
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+	about
+	< History
+	< Directions
+	< Board members
+	< Renting Mooring
 
-Things you may want to cover:
+	Members 
+	< Member directory
+	< MeetUp
+	< MainSheet (Members Only Newsletter)
 
-* Ruby version
+	Calendar
 
-* System dependencies
+	News & Announcements
+	< Races
+	< Club shotouts
+2. I would like to see a footer with info 
+3. social networking links.
+4. Nav Bar
+5. I would like to have Admin members that can post public events or use Google Calendar
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+http://stannesboatclub.weebly.com/events.html
+http://www.rownbc.org/?id=classes
+http://freedomboatclub.com/
+http://myc.org/
