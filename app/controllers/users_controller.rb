@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 		
 	end
 
-	def users2
+	def users_json
 		@users = User.all
 		render json: @users
 	end

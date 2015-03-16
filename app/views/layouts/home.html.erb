@@ -9,16 +9,10 @@
 		<%= yield %>
 	</div>
 	<div class="container">
-		<% 3.times do  %>
-		<div class="panel panel-default width_33 ">
-			<div class="panel-heading">
-				<h3 class="panel-title">Panel title</h3>
-			</div>
-			<div class="panel-body">
-				Panel content
-			</div>
-		</div>
-		<% end %>
+		<%= render partial: "home/news" %>
+		<%= render partial: "home/upcoming_events" %>
+		<%= render partial: "home/past_events" %>
+
 	</div>
 	<%= render partial: "layouts/login_modal" %>
 

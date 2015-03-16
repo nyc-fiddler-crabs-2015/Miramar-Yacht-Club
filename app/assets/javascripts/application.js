@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require main
 //= require turbolinks
+//= require main
 //= require_tree .
+$(document).on('page:load', initialize);

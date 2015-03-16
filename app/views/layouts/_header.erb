@@ -1,28 +1,28 @@
 <header>
-	<div id="leftnav"><a href="/"><%= @title || "Miramir Yacht Club" %></a></div>
-	<% if current_user %>
-
-	<div id="rightnav">
-		<div class="dropdown">
-			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-				<img src="<%= current_user.avatar %>" class="profile-image img-circle"> <%= current_user.username %> <i class="caret"></i></a>
-				<ul class="dropdown-menu">
-					<li><a href="/events"><i class="fa fa-diamond"></i> All Events</a></li>
-					<li class="divider"></li>
-					<li><a href="/users"><i class="fa fa-users"></i> All Users</a></li>
-					<li class="divider"></li>
-					<li><a href="/users/<%= current_user.id %>"><i class="fa fa-rocket"></i> User Dashboard</a></li>
-					<li class="divider"></li>
-					<li><a href="/users/<%= current_user.id %>/edit"><i class="fa fa-cog"></i> Edit Account</a></li>
-					<li class="divider"></li>
-					<li><a href="/logout"><i class="fa fa-sign-out"></i> Sign-out</a></li>
-				</ul>
-			</div>
-			<% else %>
-			
-			<div id="rightnav">
-				<a href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
-
+	<div class="header_container"><div id="leftnav"><a href="/"><%= @title || "Miramir Yacht Club" %></a></div>
+		<% if current_user %>
+	
+		<div id="rightnav">
+			<div class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					<img src="<%= current_user.avatar %>" class="profile-image img-circle"> <%= current_user.username %> <i class="caret"></i></a>
+					<ul class="dropdown-menu">
+						<li><a href="/events"><i class="fa fa-diamond"></i> All Events</a></li>
+						<li class="divider"></li>
+						<li><a href="/users"><i class="fa fa-users"></i> All Users</a></li>
+						<li class="divider"></li>
+						<li><a href="/users/<%= current_user.id %>"><i class="fa fa-rocket"></i> User Dashboard</a></li>
+						<li class="divider"></li>
+						<li><a href="/users/<%= current_user.id %>/edit"><i class="fa fa-cog"></i> Edit Account</a></li>
+						<li class="divider"></li>
+						<li><a href="/logout"><i class="fa fa-sign-out"></i> Sign-out</a></li>
+					</ul>
+				</div>
+				<% else %>
 				
-				<% end %>
+				<div id="rightnav">
+					<a href="#" data-toggle="modal" data-target="#loginModal">Log In</a>
+					</div>
+					
+					<% end %></div>
 			</header>

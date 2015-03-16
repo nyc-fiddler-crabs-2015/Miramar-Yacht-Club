@@ -3,8 +3,8 @@
 	<div class="error"><%= @error %></div>
 <% end %>
 <form action="/signup" method="post">
-	<div class="formline"><input type="text" name="username" placeHolder="username"></div>
-	<div class="formline"><input type="password" name="password" placeHolder="password"></div>
-	<div class="formline"><input type="password" name="password_confirmation" placeHolder="password-confirmation"></div>
+	<div class="formline"><input type="text" name="user[username]" placeHolder="username"></div>
+	<div class="formline"><input type="password" name="user[password]" placeHolder="password"></div>
+	<div class="formline"><input type="password" name="user[password_confirmation]" placeHolder="password-confirmation"></div>
 	<div class="formline"><input type="submit" value="Sign up"></div>
 </form>
