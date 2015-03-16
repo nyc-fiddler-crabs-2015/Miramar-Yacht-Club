@@ -7,13 +7,18 @@ Rails.application.routes.draw do
   resources :users
 
   get '/', to: 'home#index'
-    get '/users2.json', to: 'users#users_json'
 
-  post 'login_ajax', to: 'auth#login_ajax'
+  get '/users2.json', to: 'users#users_json'
+
+  post '/login_ajax', to: 'auth#login_ajax'
   get '/logout', to: 'auth#logout'
   get '/signup', to: 'auth#signup'
   post '/signup', to: 'auth#create'
   get '/cal_test', to: 'events#cal_test'
+  get 'login', to: 'auth#login'
+
+  post 'login', to: 'auth#login_post'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.

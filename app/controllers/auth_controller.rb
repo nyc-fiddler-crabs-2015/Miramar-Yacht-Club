@@ -1,11 +1,13 @@
 class AuthController < ApplicationController
 
 	def login_ajax
-		content_type :json
-		user = User.find_by_username(params[:username])
-		if user && user.authenticate( params[:password] )
+		user_params = params[:user]
+
+		user = User.find_by_username(user_params[:username])
+
+		if user && user.authenticate(user_params[:password])
 			session[:user_id] = user.id
-			{avatar: user.avatar, user_id: user.id, username: user.username}.to_json
+			 render :json => {avatar: user.avatar, user_id: user.id, username: user.username}
 		else
 			401
 		end
@@ -14,6 +16,23 @@ class AuthController < ApplicationController
 	def logout
 		session[:user_id] = nil
 		redirect_to '/'
+	end
+
+	def login
+		
+	end
+
+	def login_post
+		user_params = params[:user]
+		user = User.find_by_username(user_params[:username])
+
+		if user && user.authenticate(user_params[:password])
+			session[:user_id] = user.id
+			p "success"
+			redirect_to '/'
+		else
+			redirect_to '/login'
+		end
 	end
 
 	def signup
