@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resources :users
 
   get '/', to: 'home#index'
+  get '/right_nav', to: 'home#_right_nav'
+  get '/members_only', to: 'home#_members_only'
+
 
   get '/users2.json', to: 'users#users_json'
 

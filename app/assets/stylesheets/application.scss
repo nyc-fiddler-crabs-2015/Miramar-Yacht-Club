@@ -23,8 +23,11 @@ body {
   margin-bottom: 0; 
 }
 
-.navbar-brand {
-  padding: 15px 2em 15px 40px;
+// remove below or only use for wide width
+.container-fluid {
+    margin: 0 auto;
+  width: 1240px;
+  padding: 0px 15px 0 15px ;
 }
 
 .container {

@@ -22,24 +22,17 @@
             <li><a href="#"><i class="fa fa-location-arrow"></i> Directions</a></li>
             <li><a href="#"><i class="fa fa-globe"></i> Board members</a></li>
             <li class="divider"></li>
-            <li><a href="#"><i class="fa fa-ship"></i>Rent Moorings</a></li>
+            <li><a href="#"><i class="fa fa-ship"></i> Rent Moorings</a></li>
           </ul>
         </li>
 
 
         <li><a href="#">Calendar</a></li>
-        <li><a href="#">News</a></li>
+        <li class="news"><a  href="#">News</a></li>
+        <% if current_user %>
+        <%= render partial: "home/members_only" %>
+        <% end %>
 
-
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Members Only<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><i class="fa fa-heart"></i> MeetUp</a></li>
-            <li><a href="/users"><i class="fa fa-users"></i> Member Directory</a></li>
-            <li class="divider"></li>
-            <li><a href="#"><i class="fa fa-newspaper-o"></i> MainSheet Newsletter</a></li>
-          </ul>
-        </li>
       </ul>
 
 
@@ -49,18 +42,14 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form> -->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gaba <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
+      <% if current_user %>
+      <%= render partial: "home/right_nav" %>
+      <% else %>
+            <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" data-toggle="modal" data-target="#loginModal">Log In</a></li>
+
       </ul>
+      <% end %>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>

@@ -9,7 +9,7 @@ class AuthController < ApplicationController
 			session[:user_id] = user.id
 			 render :json => {avatar: user.avatar, user_id: user.id, username: user.username}
 		else
-			401
+			render 401
 		end
 	end
 
