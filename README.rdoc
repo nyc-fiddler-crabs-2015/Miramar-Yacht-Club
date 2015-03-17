@@ -1,28 +1,2 @@
-##User Story (CSS and Design)
-1. As a user I would like to see these sections
+This website is being designed for Miramar Yacht Club
 
-	about
-	< History
-	< Directions
-	< Board members
-	< Renting Mooring
-
-	Members 
-	< Member directory
-	< MeetUp
-	< MainSheet (Members Only Newsletter)
-
-	Calendar
-
-	News & Announcements
-	< Races
-	< Club shotouts
-2. I would like to see a footer with info 
-3. social networking links.
-4. Nav Bar
-5. I would like to have Admin members that can post public events or use Google Calendar
-
-http://stannesboatclub.weebly.com/events.html
-http://www.rownbc.org/?id=classes
-http://freedomboatclub.com/
-http://myc.org/
